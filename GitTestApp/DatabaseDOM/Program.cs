@@ -13,11 +13,23 @@ namespace DatabaseDOM
     {
         static void Main(string[] args)
         {
-            DbConnection c = new MySqlConnection("server=localhost; port=3306; user=root; password=; database=projekt_dbe");
+            string host = "localhost";
+            int port = 3306;
+            string database = "test";
+            string username = "root";
+            string password = "";
+            String connString = "Server=" + host + ";Database=" + database
+                + ";port=" + port + ";User Id=" + username + ";password=" + password;
+
+            MySqlConnection conn = new MySqlConnection(connString);
+            conn.Open();
+
+
+
             DataSet set = new DataSet();
             //den Adapter selbst konfigurieren
-            MySqlDataAdapter adapter = new MySqlDataAdapter("Select * from werte", (c);
-            
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM film",conn);
+
             adapter.Fill(set);
 
             //im Objektbaum navigieren und Daten ausgeben
