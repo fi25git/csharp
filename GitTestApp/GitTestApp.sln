@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitTestApp", "GitTestApp\GitTestApp.csproj", "{815F1870-02BA-4A12-8AF3-60561C022177}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDOM", "DatabaseDOM\DatabaseDOM.csproj", "{A68220D3-5053-44AD-8C58-3E18E252F0A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{815F1870-02BA-4A12-8AF3-60561C022177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{815F1870-02BA-4A12-8AF3-60561C022177}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{815F1870-02BA-4A12-8AF3-60561C022177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68220D3-5053-44AD-8C58-3E18E252F0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68220D3-5053-44AD-8C58-3E18E252F0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68220D3-5053-44AD-8C58-3E18E252F0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68220D3-5053-44AD-8C58-3E18E252F0A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
