@@ -15,7 +15,7 @@ namespace DatabaseDOM
         {
             string host = "localhost";
             int port = 3306;
-            string database = "test";
+            string database = "projekt_dbe";
             string username = "root";
             string password = "";
             String connString = "Server=" + host + ";Database=" + database
@@ -28,7 +28,7 @@ namespace DatabaseDOM
 
             DataSet set = new DataSet();
             //den Adapter selbst konfigurieren
-            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM film",conn);
+            MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM werte",conn);
 
             adapter.Fill(set);
 
