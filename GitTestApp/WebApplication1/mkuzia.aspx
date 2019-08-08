@@ -8,21 +8,20 @@
     <title></title>
 </head>
 <body>
-    <table border="1">
-    <%      int rot = 0;
-        int blau = 0;
-        for (int i = 0; i<10;i++)
+    <table  >
+    <%     
+        int rot = 0;
+        for (int i = 0; i<20;i++)
         {
-            blau = 0;
+            int blau = 0;
             Response.Write("<tr>");
-            for(int j = 0; j<10; j++)
+            for(int j = 0; j<20; j++)
             {
-
-                Response.Write("<td style=\"background-color: rgb(" + rot +",0," + blau + ");\"> ... </td>");
-                blau += 40;
+                Response.Write("<td width=\"25\" height=\"25\" style=\"background-color: rgb(" + rot +",0," + blau + ");\">  </td>");
+                blau += 12;
             }
             Response.Write("</tr>");
-            rot += 40;
+            rot += 12;
         }
         %>
 </table>
