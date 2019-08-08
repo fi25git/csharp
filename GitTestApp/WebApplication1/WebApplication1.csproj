@@ -191,6 +191,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="thiele.aspx" />
+    <Content Include="thiele2.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -279,6 +280,13 @@
     </Compile>
     <Compile Include="thiele.aspx.designer.cs">
       <DependentUpon>thiele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thiele2.aspx.cs">
+      <DependentUpon>thiele2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thiele2.aspx.designer.cs">
+      <DependentUpon>thiele2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
