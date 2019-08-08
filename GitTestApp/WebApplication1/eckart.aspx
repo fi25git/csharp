@@ -9,6 +9,6 @@
 </head>
 <body>
     <%Response.Write("Hallo Asp"); %>
-    <%Request[""] %>
+    
 </body>
 </html>
