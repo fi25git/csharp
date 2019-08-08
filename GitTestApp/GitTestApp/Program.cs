@@ -17,6 +17,8 @@ namespace GitTestApp
         }
 
         static void test()
-        { }
+        {
+            //mit dem eigenen Account
+        }
     }
 }
