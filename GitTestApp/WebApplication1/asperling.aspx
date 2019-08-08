@@ -11,15 +11,25 @@
     <h1><%Response.Write("Farbverlauf-Tabelle"); %></h1>
 
     <table border="1">
-        <% for (int i = 0; i < 20; i++)
-            { %>
+        <%
+        int red = 0;
+        int green = 0;
+        int blue = 0;
+        for (int i = 0; i < 20; i++){
+        %>
         <tr>
-            <%for (int j = 0; j < 20; j++)
-                {%>
-            <td><%Response.Write(j); %></td>
+            <%for (int j = 0; j < 20; j++){
+                    
+                    blue += 12;
+            %>
+            <td style='width: 50px; background-color: rgb(<% Response.Write(red+","+green+","+blue); %>);'>&nbsp;</td>
             <%}%>
         </tr>
-        <%} %>
+        <%
+                blue = 0;
+                red += 12;
+            }
+        %>
     </table>
 </body>
 </html>
