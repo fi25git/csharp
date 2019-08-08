@@ -55,7 +55,7 @@
                             blue += 250/Convert.ToInt32(anzahl);
                             if (blue >= 255)
                             {
-                                blue = 250/Convert.ToInt32(anzahl);
+                                blue = 0;
                             }
                     %>
                     <td style='width: 50px; background-color: rgb(<% Response.Write(red+","+green+","+blue); %>);'>&nbsp;</td>
@@ -66,7 +66,7 @@
                         red += 250/Convert.ToInt32(anzahl);
                         if (red >= 255)
                         {
-                            red = 250/Convert.ToInt32(anzahl);
+                            red = 0;
                         }
                     }
                 %>
