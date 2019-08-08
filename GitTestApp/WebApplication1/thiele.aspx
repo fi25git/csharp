@@ -8,16 +8,28 @@
     <title></title>
 </head>
 <body>
-   <table border="1">
-    <%for (int i = 0; i < 20; i++)
-        {
-            Response.Write("<tr>");
-            for (int j = 0; j < 20; j++)
+   <h1><%Response.Write("Farbverlauf-Beispiel-Tabelle"); %></h1>
+
+    <table border="1">
+        <%
+            int rot = 255;
+            int gruen = 0;
+            int blau = 0;
+
+            for (int i = 0; i < 20; i++)
             {
-                Response.Write("<td></td>");
+           %> <tr>
+           <% for (int j = 0; j < 20; j++)
+                {
+                    blau += 12; %>
+            <td style='width: 50px; background-color: rgb(<% Response.Write(rot+","+gruen+","+blau); %>);'>&nbsp;</td>
+            <%}%>
+           </tr>
+        <%
+                blau = 0;
+                rot = 12;
             }
-            Response.Write("</tr>");
-        } %>       
+        %>
     </table>
 </body>
 </html>
