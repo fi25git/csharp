@@ -75,9 +75,7 @@
             {
                 Response.Write("Bitte geben Sie eine Zahl ein");
             }
-
         }
-
     %>
 </body>
 </html>
