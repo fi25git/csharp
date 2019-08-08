@@ -19,8 +19,7 @@
         %>
         <tr>
             <%for (int j = 0; j < 20; j++){
-                    
-                    blue += 12;
+                  blue += 12;
             %>
             <td style='width: 50px; background-color: rgb(<% Response.Write(red+","+green+","+blue); %>);'>&nbsp;</td>
             <%}%>

@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="asperling-2.aspx" />
     <Content Include="asperling.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -207,6 +208,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="asperling-2.aspx.cs">
+      <DependentUpon>asperling-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="asperling-2.aspx.designer.cs">
+      <DependentUpon>asperling-2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="asperling.aspx.cs">
       <DependentUpon>asperling.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
