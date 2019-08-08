@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="thiele.aspx.cs" Inherits="WebApplication1.thiele" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mkuzia.aspx.cs" Inherits="WebApplication1.mkuzia" %>
 
 <!DOCTYPE html>
 
@@ -8,16 +8,18 @@
     <title></title>
 </head>
 <body>
-   <table border="1">
-    <%for (int i = 0; i < 20; i++)
+
+    <%        
+        for (int i = 0; i<10;i++)
         {
             Response.Write("<tr>");
-            for (int j = 0; j < 20; j++)
+            for(int j = 0; j<10; j++)
             {
-                Response.Write("<td></td>");
+                Response.Write("<td> ... </td>");
             }
             Response.Write("</tr>");
-        } %>       
-    </table>
+        }
+        %>
+
 </body>
 </html>
