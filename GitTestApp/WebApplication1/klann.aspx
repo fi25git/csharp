@@ -19,12 +19,12 @@
                     R++;
                     G++;
                     B++;
-                    Response.Write("<tr></tr>");
+                    Response.Write("<tr>");
                     for (int j = 0; j < 10; j++)
                     {
                         Response.Write("<td bgcolor=R:" + R + ", G:" + G + ", B:" + B + ">...</td>");
                     }
-                    //Response.Write("<br>");
+                    Response.Write("</tr>");
                 }
                 %>
         </table>
