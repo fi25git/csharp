@@ -11,15 +11,21 @@
      
         <table border="1">
             <%
-        for (int i = 0; i < 10; i++)
-        {
-            Response.Write("<tr></tr>");
-            for (int j = 0; j < 10; j++)
-            {
-                Response.Write("<td bgcolor=#000000>...</td>");
-            }
-            //Response.Write("<br>");
-        }
+                int R = 0;
+                int G = 0;
+                int B = 0;
+                for (int i = 0; i < 10; i++)
+                {
+                    R++;
+                    G++;
+                    B++;
+                    Response.Write("<tr></tr>");
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Response.Write("<td bgcolor=R:" + R + ", G:" + G + ", B:" + B + ">...</td>");
+                    }
+                    //Response.Write("<br>");
+                }
                 %>
         </table>
         
