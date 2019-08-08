@@ -21,5 +21,10 @@ namespace GitTestApp
         {
             //mit dem eigenen Account
         }
+
+        static void alexMethode()
+        {
+
+        }
     }
 }
