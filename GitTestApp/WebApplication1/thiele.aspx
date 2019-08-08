@@ -11,11 +11,12 @@
    <table border="1">
     <%for (int i = 0; i < 20; i++)
         {
-            Response.Write("<tr></tr>");
+            Response.Write("<tr>");
             for (int j = 0; j < 20; j++)
             {
                 Response.Write("<td></td>");
             }
+            Response.Write("</tr>");
         } %>       
     </table>
 </body>

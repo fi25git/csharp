@@ -142,6 +142,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="dzallmanzig.aspx" />
     <Content Include="eckart.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -158,6 +159,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="klann.aspx" />
     <Content Include="mkuzia.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -225,6 +227,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dzallmanzig.aspx.cs">
+      <DependentUpon>dzallmanzig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dzallmanzig.aspx.designer.cs">
+      <DependentUpon>dzallmanzig.aspx</DependentUpon>
+    </Compile>
     <Compile Include="eckart.aspx.cs">
       <DependentUpon>eckart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,6 +243,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="klann.aspx.cs">
+      <DependentUpon>klann.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="klann.aspx.designer.cs">
+      <DependentUpon>klann.aspx</DependentUpon>
     </Compile>
     <Compile Include="mkuzia.aspx.cs">
       <DependentUpon>mkuzia.aspx</DependentUpon>
