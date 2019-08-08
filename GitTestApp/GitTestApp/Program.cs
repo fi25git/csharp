@@ -14,19 +14,6 @@ namespace GitTestApp
             //klann
             //test1
             //tebdjed
-            // Alex war hier
-            // Matze hat Code abgelegt
-            // Jens war hier ;-))
-        }
-
-        static void test()
-        {
-            //mit dem eigenen Account
-        }
-
-        static void alexMethode()
-        {
-
         }
     }
 }
