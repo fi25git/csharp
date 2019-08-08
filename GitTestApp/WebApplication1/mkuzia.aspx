@@ -15,9 +15,9 @@
             Response.Write("<tr>");
             for(int j = 0; j<10; j++)
             {
-                Response.Write("<th> ... </th>");
+                Response.Write("<td> ... </td>");
             }
-            Response.Write("</tr><br>");
+            Response.Write("</tr>");
         }
         %>
 
