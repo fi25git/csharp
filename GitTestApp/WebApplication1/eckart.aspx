@@ -9,6 +9,16 @@
 </head>
 <body>
     <%Response.Write("Hallo Asp"); %>
-    <%Request[""] %>
+    <i>Was ist?</i>
+    <%
+        for (int i = 0; i < 20; i++)
+        {
+            for (int j = 0; j < 20; j++)
+            {
+                Response.Write(i);
+            }
+            Response.Write("<br>");
+            
+        } %>
 </body>
 </html>
