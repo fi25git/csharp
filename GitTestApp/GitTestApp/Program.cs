@@ -15,5 +15,8 @@ namespace GitTestApp
             //test1
             //tebdjed
         }
+
+        static void test()
+        { }
     }
 }
