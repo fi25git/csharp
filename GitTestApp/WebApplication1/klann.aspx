@@ -8,16 +8,20 @@
     <title></title>
 </head>
 <body>
-    <% 
-        for (int i = 0; i < 20; i++)
+     
+        <table border="1">
+            <%
+        for (int i = 0; i < 10; i++)
         {
             Response.Write("<tr></tr>");
-            for (int j = 0; i < 20; i++)
+            for (int j = 0; j < 10; j++)
             {
-                Response.Write("<td></td>");
+                Response.Write("<td bgcolor=#000000>...</td>");
             }
-            Response.Write("<br>");
+            //Response.Write("<br>");
         }
-        %>
+                %>
+        </table>
+        
 </body>
 </html>
