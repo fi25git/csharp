@@ -10,19 +10,22 @@
 <body>
     <table border="1">
     <%
-        int R = 255;
-        int G = 0;
+        int R = 0;
+        int G = 255;
         int B = 0;
-        for (int i = 0; i < 255; i++)
+
+        for (int i = 0; i < 25; i++)
         {
-            R++;
-            G++;
-            B++;
-            Response.Write("<tr></tr>");
-            for (int j = 0; j < 255; j++)
+            Response.Write("<tr>");
+            
+            for (int j = 0; j < 25; j++)
             {
-                Response.Write("<td bgcolor=R:"+R+",G:"+G+",B:"+B+">.</td>");
+                //Response.Write("<td bgcolor=rgb("+R+","+G+","+B+")>....</td>");
+                Response.Write("<td bgcolor=#" + (((i*10)<<16)|(G<<8)|(j*10)).ToString("X6") + ">....</td>");
+                
             }
+            
+            Response.Write("</tr>");
         }
 
 
