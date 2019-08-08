@@ -16,13 +16,16 @@
                 int B = 0;
                 for (int i = 0; i < 10; i++)
                 {
-                    R++;
-                    G++;
-                    B++;
+                    R += 10;
+                    G += 10;
+                    B = 0;
+                    
                     Response.Write("<tr>");
                     for (int j = 0; j < 10; j++)
                     {
-                        Response.Write("<td bgcolor=R:" + R + ", G:" + G + ", B:" + B + ">...</td>");
+                        B += 10;
+                        G -= 10;
+                        Response.Write("<td bgcolor=" + "'" + "rgb(" + R + "%," + G + "%," + B + "%)" + "'" + ">...</td>");
                     }
                     Response.Write("</tr>");
                 }
