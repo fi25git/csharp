@@ -16,5 +16,10 @@ namespace GitTestApp
             //tebdjed
             // Alex war hier
         }
+
+        static void test()
+        {
+            //mit dem eigenen Account
+        }
     }
 }
