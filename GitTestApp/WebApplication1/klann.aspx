@@ -9,20 +9,23 @@
 </head>
 <body>
      
-        <table border="1">
+        <table border="0">
             <%
                 int R = 0;
                 int G = 0;
                 int B = 0;
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 20; i++)
                 {
-                    R++;
-                    G++;
-                    B++;
+                    R += 5;
+                    G += 5;
+                    B = 0;
+                    
                     Response.Write("<tr>");
-                    for (int j = 0; j < 10; j++)
+                    for (int j = 0; j < 20; j++)
                     {
-                        Response.Write("<td bgcolor=R:" + R + ", G:" + G + ", B:" + B + ">...</td>");
+                        B += 5;
+                        G -= 5;
+                        Response.Write("<td bgcolor=" + "'" + "rgb(" + R + "%," + G + "%," + B + "%)" + "'" + ">...</td>");
                     }
                     Response.Write("</tr>");
                 }
