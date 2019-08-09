@@ -15,6 +15,9 @@ namespace GitTestApp
             //test1
             //tebdjed
             // Alex war hier
+            // Matze hat Code abgelegt
+            // Jens war hier ;-))
+            // DAAAAAAAAAAAAAAANIEL
         }
 
         static void test()
@@ -24,6 +27,7 @@ namespace GitTestApp
 
         static void alexMethode()
         {
+
 
         }
     }
