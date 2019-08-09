@@ -10,8 +10,6 @@
 namespace WebApplication1 {
     
     
-    public partial class klann
-    {
-          
+    public partial class thiele_datenbank {
     }
 }
