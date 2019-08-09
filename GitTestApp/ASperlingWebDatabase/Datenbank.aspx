@@ -6,6 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style>
+        table tr td:last-child {
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
     <h1>Datenbank mit .aspx</h1>

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="klann_db.aspx.cs" Inherits="WebApplication1.klann_db" %>
-
+<%@ Import Namespace="MySql.Data.MySqlClient" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
