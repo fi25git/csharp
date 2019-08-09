@@ -44,7 +44,6 @@
             if (tabelle != "")
             {
                 Response.Write("<h2>Tabelle: " + tabelle + "</h2>");
-                //Response.Write(DBConnect.showTable(tabelle));
                 Response.Write(DBConnect.showTabelle(tabelle));
             }
         %>
