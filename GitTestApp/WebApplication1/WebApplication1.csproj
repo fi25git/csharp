@@ -161,6 +161,7 @@
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="klann.aspx" />
+    <Content Include="klann_db.aspx" />
     <Content Include="mkuzia.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="klann.aspx.designer.cs">
       <DependentUpon>klann.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="klann_db.aspx.cs">
+      <DependentUpon>klann_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="klann_db.aspx.designer.cs">
+      <DependentUpon>klann_db.aspx</DependentUpon>
     </Compile>
     <Compile Include="mkuzia.aspx.cs">
       <DependentUpon>mkuzia.aspx</DependentUpon>
