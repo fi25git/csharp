@@ -46,6 +46,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>P:\C#\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>P:\C#\v4.5.2\MySql.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -193,6 +199,7 @@
     <Content Include="Site.Master" />
     <Content Include="thiele.aspx" />
     <Content Include="thiele2.aspx" />
+    <Content Include="thiele_datenbank.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -295,6 +302,13 @@
     </Compile>
     <Compile Include="thiele2.aspx.designer.cs">
       <DependentUpon>thiele2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thiele_datenbank.aspx.cs">
+      <DependentUpon>thiele_datenbank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thiele_datenbank.aspx.designer.cs">
+      <DependentUpon>thiele_datenbank.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

@@ -8,6 +8,35 @@
     <title></title>
 </head>
 <body>
-   
+   <h1><%Response.Write("Farbverlauf-Beispiel-Tabelle"); %></h1>
+    
+        Anzahl: <input type="text" id="anzahl" runat="server"><br>
+        <button type="button" onclick="generieren()">generieren</button><br> 
+        <%
+            string name = anzahl.Value.ToString();
+
+           void generieren()
+                {%>
+                    <table border="1">
+                   <% 
+                    int rot = 255;
+                    int gruen = 0;
+                    int blau = 0;
+                        for (int i = 0; i < Convert.ToInt32(name); i++)
+            {
+            
+            for (int j = 0; j < Convert.ToInt32(name); j++)
+                {
+                    blau += 12; %>
+            <td style='width: 50px; background-color: rgb( Response.Write(rot+","+gruen+","+blau); );
+           <%  }                   
+                blau = 0;
+                rot = 12;
+            }%>
+        
+    </table>
+            }
+
+            
 </body>
 </html>

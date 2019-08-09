@@ -10,15 +10,6 @@
 namespace WebApplication1 {
     
     
-    public partial class thiele2 {
-        
-        /// <summary>
-        /// anzahl-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText anzahl;
+    public partial class thiele_datenbank {
     }
 }
