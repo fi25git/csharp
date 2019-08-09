@@ -9,7 +9,7 @@
 </head>
 <body>
      
-        <table border="0">
+        <table width=100% height=1000 border="0" cellspacing="0">
             <%
                 int R = 0;
                 int G = 0;
@@ -25,11 +25,11 @@
                     {
                         B += 5;
                         G -= 5;
-                        Response.Write("<td bgcolor=" + "'" + "rgb(" + R + "%," + G + "%," + B + "%)" + "'" + ">...</td>");
+                        Response.Write("<td width=5% height=5% bgcolor=" + "'" + "rgb(" + R + "%," + G + "%," + B + "%)" + "'" + "></td>");
                     }
                     Response.Write("</tr>");
                 }
-                %>
+            %>
         </table>
         
 </body>

@@ -46,6 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>MySQL_Data_DLL\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -249,6 +253,7 @@
     </Compile>
     <Compile Include="dzallmanzigDatenbank.aspx.cs">
       <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dzallmanzigDatenbank.aspx.designer.cs">
       <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
@@ -272,6 +277,7 @@
     </Compile>
     <Compile Include="klann_db.aspx.cs">
       <DependentUpon>klann_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="klann_db.aspx.designer.cs">
       <DependentUpon>klann_db.aspx</DependentUpon>
@@ -285,6 +291,7 @@
     </Compile>
     <Compile Include="mkuzia_DB.aspx.cs">
       <DependentUpon>mkuzia_DB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mkuzia_DB.aspx.designer.cs">
       <DependentUpon>mkuzia_DB.aspx</DependentUpon>
@@ -313,6 +320,7 @@
     </Compile>
     <Compile Include="thiele_db.aspx.cs">
       <DependentUpon>thiele_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="thiele_db.aspx.designer.cs">
       <DependentUpon>thiele_db.aspx</DependentUpon>

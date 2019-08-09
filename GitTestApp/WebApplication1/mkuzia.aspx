@@ -44,19 +44,14 @@
                     {
                         Response.Write("<td width=\"25\" height=\"25\" style=\"background-color: rgb(" + rot + ", " + grün + "," + temp + ");\">  </td>");
                         temp += 12;
-
                     }
                     Response.Write("</tr>");
-
                     rot += 12;
                 }
             }
         }
         %>
-
 </table>
-
-
     </form>
 </body>
 </html>
