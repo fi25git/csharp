@@ -10,10 +10,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <input type="text" id="Server"/> : Server <br /><br />
-            <input type="text" id="Port"/> : Port <br /><br />
-            <input type="text" id="User"/> : User <br /><br />
-            <input type="text" id="Passwort"/> : Passwort <br /><br />
+            <asp:TextBox ID="tbServer" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:TextBox ID="tbPort" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:TextBox ID="tbUser" runat="server"></asp:TextBox>
+            <br /><br />
+            <asp:TextBox ID="tbPW" runat="server"></asp:TextBox>
+            <br /><br />
             <input type="submit" value="Verbinden"/>
         </div>
     </form>
