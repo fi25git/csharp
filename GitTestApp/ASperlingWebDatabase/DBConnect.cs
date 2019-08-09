@@ -128,13 +128,19 @@ namespace ASperlingWebDatabase
                 for (int i = 0; i < set.Tables[tabelle].Columns.Count; i++)
                 {
                     tableStringBuilder.Append("<th>").Append(set.Tables[tabelle].Columns[i].ToString()).Append("</th>");
-                    foreach (DataRow row in set.Tables[tabelle].Rows)
-                    {
-                        tableStringBuilder.Append("<th>").Append(set.Tables[tabelle].Columns[i].ToString()).Append("</th>");
-                        //Console.WriteLine("{0}; FSK: {1}; Dauer: {2}; Jahr: {3}", row[1], row[3], row[4], row[5]);
-                    }
+                    
                 }
                 tableStringBuilder.Append("</tr>");
+                
+                foreach (DataRow row in set.Tables[tabelle].Rows)
+                {
+                    tableStringBuilder.Append("<tr>");
+                    for (int i = 0; i < set.Tables[tabelle].Columns.Count; i++)
+                    {
+                        tableStringBuilder.Append("<td>").Append(row[i]).Append("</td>");
+                    }
+                    tableStringBuilder.Append("</tr>");
+                }
                 
                 foreach (DataRow row in set.Tables[tabelle].Rows)
                 {
