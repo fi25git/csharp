@@ -144,6 +144,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="dzallmanzig.aspx" />
+    <Content Include="dzallmanzigDatenbank.aspx" />
     <Content Include="eckart.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -162,6 +163,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="klann.aspx" />
     <Content Include="mkuzia.aspx" />
+    <Content Include="MySQL_Data_DLL\MySql.Data.dll" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -241,6 +243,13 @@
     </Compile>
     <Compile Include="dzallmanzig.aspx.designer.cs">
       <DependentUpon>dzallmanzig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dzallmanzigDatenbank.aspx.cs">
+      <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dzallmanzigDatenbank.aspx.designer.cs">
+      <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
     </Compile>
     <Compile Include="eckart.aspx.cs">
       <DependentUpon>eckart.aspx</DependentUpon>
