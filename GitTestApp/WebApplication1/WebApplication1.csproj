@@ -249,7 +249,6 @@
     </Compile>
     <Compile Include="dzallmanzigDatenbank.aspx.cs">
       <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dzallmanzigDatenbank.aspx.designer.cs">
       <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
@@ -273,7 +272,6 @@
     </Compile>
     <Compile Include="klann_db.aspx.cs">
       <DependentUpon>klann_db.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="klann_db.aspx.designer.cs">
       <DependentUpon>klann_db.aspx</DependentUpon>
@@ -287,7 +285,6 @@
     </Compile>
     <Compile Include="mkuzia_DB.aspx.cs">
       <DependentUpon>mkuzia_DB.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mkuzia_DB.aspx.designer.cs">
       <DependentUpon>mkuzia_DB.aspx</DependentUpon>
@@ -316,7 +313,6 @@
     </Compile>
     <Compile Include="thiele_db.aspx.cs">
       <DependentUpon>thiele_db.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="thiele_db.aspx.designer.cs">
       <DependentUpon>thiele_db.aspx</DependentUpon>

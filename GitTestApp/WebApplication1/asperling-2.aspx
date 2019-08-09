@@ -60,7 +60,7 @@
                     %>
                     <td style='width: 50px; background-color: rgb(<% Response.Write(red+","+green+","+blue); %>);'>&nbsp;</td>
                     <%}%>
-                </tr>
+                </tr> 
                 <%
                         blue = 0;
                         red += 250/Convert.ToInt32(anzahl);
