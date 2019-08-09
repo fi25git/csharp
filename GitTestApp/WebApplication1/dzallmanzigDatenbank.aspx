@@ -10,15 +10,15 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="tbServer" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbServer" runat="server" Text="LocalHost"></asp:TextBox>
             <br /><br />
-            <asp:TextBox ID="tbPort" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbPort" runat="server" Text="3306"></asp:TextBox>
             <br /><br />
-            <asp:TextBox ID="tbUser" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbUser" runat="server" Text="root"></asp:TextBox>
             <br /><br />
             <asp:TextBox ID="tbPW" runat="server"></asp:TextBox>
             <br /><br />
-            <input type="submit" value="Verbinden"/>
+            <asp:Button ID="Verbinden" runat="server" OnClick="ClickVerbinden" Text="Verbinden" />
         </div>
     </form>
 </body>

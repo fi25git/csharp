@@ -47,7 +47,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\C#\mysql-connector-net-8.0.17-noinstall\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>E:\Unterrichtsfächer\C#\Connector\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />

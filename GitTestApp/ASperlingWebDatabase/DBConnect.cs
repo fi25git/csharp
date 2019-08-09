@@ -17,7 +17,7 @@ namespace ASperlingWebDatabase
         {
             string host = "localhost";
             int port = 3306;
-            string database = "simplefilm";
+            string database = "apollo";
             string username = "root";
             string password = "";
             String connString = "Server=" + host + ";Database=" + database

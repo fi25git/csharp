@@ -15,8 +15,15 @@ namespace WebApplication1
         {
 
         }
+
+        protected void ClickVerbinden(object sender, EventArgs e)
+        {
+            ConnectDatabase();
+        }
+
+
         // Status ob mit dem Datenbank Server verbunden oder nicht
-        Boolean SrvStatus = false;
+        // Boolean SrvStatus = false;
 
         // Verbindung zur Datenbank
         DbConnection c;
@@ -29,11 +36,13 @@ namespace WebApplication1
             String Port = "Port=" + tbPort.Text + ";";
             String User = "UID=" + tbUser.Text + ";";
             String PW = "PWD=" + tbPW.Text + ";";
+            
             c = new MySqlConnection(ServerName + Port + User + PW);
+            Console.WriteLine(ServerName + Port + User + PW);
 
             //try
             //{
-                c.Open();
+            c.Open();
                 // Zeigt in der ListBox die einzelnen Datenbanken auf
                 //pictureBox1.Show();
                 //DatenbankenAnzeigen();
