@@ -18,7 +18,7 @@ namespace ASperlingWebDatabase
         {
             string host = "localhost";
             int port = 3306;
-            string database = "apollo";
+            string database = "simplefilm";
             string username = "root";
             string password = "";
             String connString = "Server=" + host + ";Database=" + database
@@ -52,8 +52,8 @@ namespace ASperlingWebDatabase
             }
             catch (Exception ex)
             {
-
-                throw;
+                tables.Add("Zugriff zur Datenbank fehlgeschlagen");
+                tables.Add("Error: " + ex.Message);
             }
             
             return tables;

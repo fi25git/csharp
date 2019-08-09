@@ -15,12 +15,21 @@
 <body>
     <h1>Datenbank mit .aspx</h1>
     <div style="float:left; width:30%;">
+        
         <form id="form1" runat="server" method="post" action="Datenbank">
+            <%
+                List<string> tabellen = DBConnect.DBTables();
+                if (tabellen[0].Equals("Zugriff zur Datenbank fehlgeschlagen"))
+                {
+                    Response.Write("<h3>" + tabellen[0] + "</h3>");
+                    Response.Write("<p>" + tabellen[1] + "</p>");
+                } else {
+            %>
             <label for="tables">Tabellen</label>
             <select name="tables" id="tables">
                 <option value="">Bitte wählen</option>
+
                 <%
-                    List<string> tabellen = DBConnect.DBTables();
                     foreach (string item in tabellen)
                     {
                         Response.Write("<option>" + item + "</option>");
@@ -28,6 +37,7 @@
                 %>
             </select><br /><br />
             <input type="submit" name="anfrage" value="Tabelle zeigen" />
+            <% } %>
         </form>
     
         <%
