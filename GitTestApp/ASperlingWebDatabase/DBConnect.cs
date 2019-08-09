@@ -13,6 +13,7 @@ namespace ASperlingWebDatabase
     {
         private static MySqlConnection conn = null;
 
+        // Connection herstellen
         public static void connectDB()
         {
             string host = "localhost";
@@ -26,6 +27,7 @@ namespace ASperlingWebDatabase
             conn = new MySqlConnection(connString);
         } // Ende connectDB()
 
+        // Datenbank-Tabellen ausgeben
         public static List<string> DBTables()
         {
             List<string> tables = new List<string>();
@@ -57,6 +59,7 @@ namespace ASperlingWebDatabase
             return tables;
         } // Ende DBTables()
 
+        // Tabelle mit Reader
         public static StringBuilder showTable(string tabelle)
         {
             StringBuilder tableStringBuilder = new StringBuilder();
@@ -73,20 +76,20 @@ namespace ASperlingWebDatabase
                     tableStringBuilder.Append("<table>");
                     while (reader.Read())
                     {
-                        tableStringBuilder.Append("<tr>");
                         string id = reader.GetString(0);
                         string filmtitel = reader.GetString(1);
                         string originaltitel = reader.GetString(2);
                         string fsk = reader.GetString(3);
                         string dauer = reader.GetString(4);
                         string jahr = reader.GetString(5);
-                        tableStringBuilder.Append("<td>").Append(id).Append("</td>");
-                        tableStringBuilder.Append("<td>").Append(filmtitel).Append("</td>");
-                        tableStringBuilder.Append("<td>").Append(originaltitel).Append("</td>");
-                        tableStringBuilder.Append("<td>").Append(fsk).Append("</td>");
-                        tableStringBuilder.Append("<td>").Append(dauer).Append("</td>");
-                        tableStringBuilder.Append("<td>").Append(jahr).Append("</td>");
-                        //string[] row = { id, filmtitel, originaltitel, fsk, dauer, jahr };
+
+                        tableStringBuilder.Append("<tr>");
+                            tableStringBuilder.Append("<td>").Append(id).Append("</td>");
+                            tableStringBuilder.Append("<td>").Append(filmtitel).Append("</td>");
+                            tableStringBuilder.Append("<td>").Append(originaltitel).Append("</td>");
+                            tableStringBuilder.Append("<td>").Append(fsk).Append("</td>");
+                            tableStringBuilder.Append("<td>").Append(dauer).Append("</td>");
+                            tableStringBuilder.Append("<td>").Append(jahr).Append("</td>");
                         tableStringBuilder.Append("</tr>");
                     }
                     tableStringBuilder.Append("</table>");
@@ -96,12 +99,12 @@ namespace ASperlingWebDatabase
             }
             catch (Exception ex)
             {
-
-                throw;
+                tableStringBuilder.Append("Error: " + ex.Message);
             }
             return tableStringBuilder;
-        }
+        } // Ende showTable()
 
+        // Universelle Tabellen-Ausgabe mit MySqlDataAdapter
         public static StringBuilder showTabelle(string tabelle)
         {
             StringBuilder tableStringBuilder = new StringBuilder();
@@ -112,46 +115,37 @@ namespace ASperlingWebDatabase
                 tableStringBuilder.Append("<table>");
 
                 DataSet set = new DataSet();
-                //den Adapter selbst konfigurieren
                 MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM " + tabelle, conn);
                 adapter.Fill(set,tabelle);
-                //Console.WriteLine(set.Tables.Count);
-                //Console.WriteLine(set.Tables[0].TableName);
-
-                //foreach (DataColumn column in set.Tables[tabelle].Columns)
-                //{
-
-                //}
-                
+                                
                 // Table-Header
                 tableStringBuilder.Append("<tr>");
                 for (int i = 0; i < set.Tables[tabelle].Columns.Count; i++)
                 {
                     tableStringBuilder.Append("<th>").Append(set.Tables[tabelle].Columns[i].ToString()).Append("</th>");
-                    foreach (DataRow row in set.Tables[tabelle].Rows)
-                    {
-                        tableStringBuilder.Append("<th>").Append(set.Tables[tabelle].Columns[i].ToString()).Append("</th>");
-                        //Console.WriteLine("{0}; FSK: {1}; Dauer: {2}; Jahr: {3}", row[1], row[3], row[4], row[5]);
-                    }
                 }
                 tableStringBuilder.Append("</tr>");
                 
+                // Datensätze
                 foreach (DataRow row in set.Tables[tabelle].Rows)
                 {
-                    //Console.WriteLine("{0}; FSK: {1}; Dauer: {2}; Jahr: {3}", row[1], row[3], row[4], row[5]);
+                    tableStringBuilder.Append("<tr>");
+                    for (int i = 0; i < set.Tables[tabelle].Columns.Count; i++)
+                    {
+                        tableStringBuilder.Append("<td style='padding: 0px 5px;'>").Append(row[i]).Append("</td>");
+                    }
+                    tableStringBuilder.Append("</tr>");
                 }
-                tableStringBuilder.Append(set.Tables[tabelle].Columns.Count);
-
+                
                 tableStringBuilder.Append("</table>");
                 conn.Close();
             }
             catch (Exception ex)
             {
-
-                throw;
+                tableStringBuilder.Append("Error: " + ex.Message);
             }
             return tableStringBuilder;
-        }
-        
+        } // Ende showTabelle()
+
     }
 }
