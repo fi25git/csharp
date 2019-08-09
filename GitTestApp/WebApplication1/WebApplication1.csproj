@@ -46,9 +46,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\C#\mysql-connector-net-8.0.17-noinstall\v4.5.2\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -147,6 +144,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="dzallmanzig.aspx" />
+    <Content Include="dzallmanzigDatenbank.aspx" />
     <Content Include="eckart.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -164,7 +162,10 @@
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="klann.aspx" />
+    <Content Include="klann_db.aspx" />
     <Content Include="mkuzia.aspx" />
+    <Content Include="mkuzia_DB.aspx" />
+    <Content Include="MySQL_Data_DLL\MySql.Data.dll" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -195,6 +196,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="thiele.aspx" />
+    <Content Include="thiele_db.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -245,6 +247,13 @@
     <Compile Include="dzallmanzig.aspx.designer.cs">
       <DependentUpon>dzallmanzig.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dzallmanzigDatenbank.aspx.cs">
+      <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dzallmanzigDatenbank.aspx.designer.cs">
+      <DependentUpon>dzallmanzigDatenbank.aspx</DependentUpon>
+    </Compile>
     <Compile Include="eckart.aspx.cs">
       <DependentUpon>eckart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,12 +271,26 @@
     <Compile Include="klann.aspx.designer.cs">
       <DependentUpon>klann.aspx</DependentUpon>
     </Compile>
+    <Compile Include="klann_db.aspx.cs">
+      <DependentUpon>klann_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="klann_db.aspx.designer.cs">
+      <DependentUpon>klann_db.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mkuzia.aspx.cs">
       <DependentUpon>mkuzia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mkuzia.aspx.designer.cs">
       <DependentUpon>mkuzia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mkuzia_DB.aspx.cs">
+      <DependentUpon>mkuzia_DB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mkuzia_DB.aspx.designer.cs">
+      <DependentUpon>mkuzia_DB.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -290,6 +313,13 @@
     </Compile>
     <Compile Include="thiele.aspx.designer.cs">
       <DependentUpon>thiele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thiele_db.aspx.cs">
+      <DependentUpon>thiele_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thiele_db.aspx.designer.cs">
+      <DependentUpon>thiele_db.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
