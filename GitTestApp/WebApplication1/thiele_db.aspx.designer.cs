@@ -11,7 +11,6 @@ namespace WebApplication1
 {
     public partial class thiele_db
     {
-
         /// <summary>
         /// form1-Steuerelement
         /// </summary>
