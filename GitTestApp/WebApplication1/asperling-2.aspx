@@ -29,7 +29,7 @@
                 <%for (int i = 0; i < 100; i++){%>
                     <option><%Response.Write(i); %></option>
                 <%} %>
-            </select>
+            </select> 
         </fieldset><br />
         
 
