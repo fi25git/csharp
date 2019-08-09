@@ -112,17 +112,9 @@ namespace ASperlingWebDatabase
                 tableStringBuilder.Append("<table>");
 
                 DataSet set = new DataSet();
-                //den Adapter selbst konfigurieren
                 MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT * FROM " + tabelle, conn);
                 adapter.Fill(set,tabelle);
-                //Console.WriteLine(set.Tables.Count);
-                //Console.WriteLine(set.Tables[0].TableName);
-
-                //foreach (DataColumn column in set.Tables[tabelle].Columns)
-                //{
-
-                //}
-                
+                                
                 // Table-Header
                 tableStringBuilder.Append("<tr>");
                 for (int i = 0; i < set.Tables[tabelle].Columns.Count; i++)
@@ -137,17 +129,11 @@ namespace ASperlingWebDatabase
                     tableStringBuilder.Append("<tr>");
                     for (int i = 0; i < set.Tables[tabelle].Columns.Count; i++)
                     {
-                        tableStringBuilder.Append("<td>").Append(row[i]).Append("</td>");
+                        tableStringBuilder.Append("<td style='padding: 0px 5px;'>").Append(row[i]).Append("</td>");
                     }
                     tableStringBuilder.Append("</tr>");
                 }
                 
-                foreach (DataRow row in set.Tables[tabelle].Rows)
-                {
-                    //Console.WriteLine("{0}; FSK: {1}; Dauer: {2}; Jahr: {3}", row[1], row[3], row[4], row[5]);
-                }
-                tableStringBuilder.Append(set.Tables[tabelle].Columns.Count);
-
                 tableStringBuilder.Append("</table>");
                 conn.Close();
             }
