@@ -12,19 +12,21 @@ namespace ASperlingWebDatabase
     public class DBConnect
     {
         private static MySqlConnection conn = null;
+        public static bool verbindung = false;
 
         // Connection herstellen
-        public static void connectDB()
+        public static void connectDB(string host, string port, string database, string username, string password)
         {
-            string host = "localhost";
-            int port = 3306;
-            string database = "simplefilm";
-            string username = "root";
-            string password = "";
+            //string host = "localhost";
+            //int port = 3306;
+            //string database = "simplefilm";
+            //string username = "root";
+            //string password = "";
             String connString = "Server=" + host + ";Database=" + database
                 + ";port=" + port + ";User Id=" + username + ";password=" + password;
 
             conn = new MySqlConnection(connString);
+            verbindung = true;
         } // Ende connectDB()
 
         // Datenbank-Tabellen ausgeben

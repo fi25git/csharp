@@ -10,35 +10,75 @@
         table tr td:last-child {
             text-align: right;
         }
+        .form_row {
+            margin-bottom:7px;
+        }
+        label {
+            display: inline-block;
+            width: 80px;
+        }
     </style>
 </head>
 <body>
     <h1>Datenbank mit .aspx</h1>
     <div style="float:left; width:30%;">
-        
-        <form id="form1" runat="server" method="post" action="Datenbank">
-            <%
+        <form id="form1" runat="server">
+            <fieldset>
+                <legend>Verbindung zur Datenbank</legend>
+                <div class="form_row">
+                    <label for="dbserver">Server:</label>
+                    <asp:TextBox ID="dbserver" runat="server" Text="localhost"></asp:TextBox>
+                </div>
+                <div class="form_row">
+                    <label for="port">Port:</label>
+                    <asp:TextBox ID="dbport" runat="server" Text="3306"></asp:TextBox>
+                </div>
+                <div class="form_row">
+                    <label for="dbname">Name:</label>
+                    <asp:TextBox ID="dbname" runat="server" Text="simplefilm"></asp:TextBox>
+                </div>
+                <div class="form_row">
+                    <label for="dbuser">User:</label>
+                    <asp:TextBox ID="dbuser" runat="server" Text="root"></asp:TextBox>
+                </div>
+                <div class="form_row">
+                    <label for="dbpwd">Password:</label>
+                    <asp:TextBox ID="dbpwd" runat="server" Text=""></asp:TextBox>
+                </div>
+            </fieldset>
+            <asp:Button ID="dbverbinden" runat="server" OnClick="dbVerbinden" Text="Verbinden" />
+        </form><br /><br />
+
+        <% if (DBConnect.verbindung) { %>
+        <form id="form2" name="form2" method="post" action="Datenbank">
+            <fieldset>
+                <legend>DB-Tabellen</legend>
+                <%
                 List<string> tabellen = DBConnect.DBTables();
                 if (tabellen[0].Equals("Zugriff zur Datenbank fehlgeschlagen"))
                 {
                     Response.Write("<h3>" + tabellen[0] + "</h3>");
                     Response.Write("<p>" + tabellen[1] + "</p>");
-                } else {
-            %>
-            <label for="tables">Tabellen</label>
-            <select name="tables" id="tables">
-                <option value="">Bitte wählen</option>
+                }
+                else
+                {
+                %>
+                    <label for="tables">Tabellen:</label>
+                    <select name="tables" id="tables">
+                       <option value="">Bitte wählen</option>
 
                 <%
-                    foreach (string item in tabellen)
-                    {
-                        Response.Write("<option>" + item + "</option>");
-                    }
+                foreach (string item in tabellen)
+                {
+                    Response.Write("<option>" + item + "</option>");
+                }
                 %>
-            </select><br /><br />
+                </select>
+            </fieldset>
             <input type="submit" name="anfrage" value="Tabelle zeigen" />
             <% } %>
         </form>
+        <% } %>
     
         <%
             string tabelle = "";

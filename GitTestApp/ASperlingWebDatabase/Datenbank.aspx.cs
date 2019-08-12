@@ -13,7 +13,12 @@ namespace ASperlingWebDatabase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DBConnect.connectDB();
+            
+        }
+
+        protected void dbVerbinden(object sender, EventArgs e)
+        {
+            DBConnect.connectDB(dbserver.Text, dbport.Text, dbname.Text, dbuser.Text, dbpwd.Text);
         }
     }
     
